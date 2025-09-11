@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('reset.css');
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 1.25rem;
+}
+
+header {
+    background-color: var(--background-title-color);
+    padding: 0.625rem;
+    text-align: center;
+    color: var(--title-color);
+    border-radius: 0.3125rem;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.lista-cadastro {
+    margin-top: 1.25rem;
+    display: flex;
+}
+
+.lista-cadastro input[type="text"] {
+    padding: 0.625rem;
+    width: 70%;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.2rem;
+    font-size: 1em;
+    margin-left: 0.2rem;
+}
+
+.lista-cadastro input[type="submit"] {
+    padding: 0.625rem 0.9375rem;
+    background-color: #5a71bb;
+    color: white;
+    border: none;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 0.3rem;
+    transition: background-color 0.3s ease;
+}
+
+.lista-cadastro input[type="submit"]:hover {
+    background-color: #243685;
+    transform: translateY(-2px);
+}
+
+.lista-cadastro input[type="number"] {
+    padding: 0.625rem;
+    width: 35%;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.2rem;
+    font-size: 1em;
+    margin-left: 0.2rem;
+}
+
+
+.lista-produtos-single {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.625rem;
+    border-bottom: 0.1rem solid #ccc;
+    margin-top: 0.625rem;
+}
+
+.lista-produtos-single:nth-child(even) {
+    background-color: #d3c9c957;
+}
+
+.lista-produtos-single span {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 0.3125rem 0.625rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.lista-produtos-single span:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+.soma-produto {
+    margin-top: 1.25rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #696b72;
+}
+
+button {
+    padding: 0.625rem 0.9375rem;
+    background-color: #5a71bb;
+    color: white;
+    border: none;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1.25rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #243685;
+    transform: translateY(-2px);
+}
+
+footer {
+    text-align: center;
+    margin-top: 1.25rem;
+    color: var(--text-color);
+}
