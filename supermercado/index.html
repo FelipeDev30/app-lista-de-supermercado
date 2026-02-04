@@ -1,27 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+    <title>Lista de Supermercado</title>
 </head>
 <body>
-    <header>
-        <h2>App Lista de Supermercado</h2>
-    </header>
-    <div class="lista-cadastro">
-        <input type="text" name="nome_produto" placeholder="Nome do produto">
-        <input type="number" name="price" placeholder="Valor do produto">
-        <input type="submit" value="Cadastrar" name="acao">
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div class="header-title">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h1>Minha Lista</h1>
+                </div>
+                <p class="header-subtitle">Organize sua compra facilmente</p>
+            </div>
+        </header>
+
+        <main>
+            <!-- Seção de Entrada -->
+            <section class="input-section">
+                <h2>Adicionar Produto</h2>
+                <form class="lista-cadastro" id="formProduto">
+                    <div class="input-group">
+                        <input 
+                            type="text" 
+                            id="nome_produto"
+                            name="nome_produto" 
+                            placeholder="Nome do produto" 
+                            required
+                        >
+                    </div>
+                    <div class="input-group">
+                        <input 
+                            type="number" 
+                            id="price"
+                            name="price" 
+                            placeholder="R$ 0,00" 
+                            step="0.01"
+                            min="0"
+                            required
+                        >
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-plus"></i> Adicionar
+                    </button>
+                </form>
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input 
+                        type="text" 
+                        id="buscar_produto" 
+                        placeholder="Buscar produtos..."
+                    >
+                </div>
+            </section>
+
+            <!-- Seção de Filtro -->
+            <section class="filter-section">
+                <button class="filter-btn active" data-filter="todos">
+                    <i class="fas fa-list"></i> Todos
+                </button>
+                <button class="filter-btn" data-filter="pendentes">
+                    <i class="fas fa-circle"></i> Pendentes
+                </button>
+                <button class="filter-btn" data-filter="comprados">
+                    <i class="fas fa-check-circle"></i> Comprados
+                </button>
+            </section>
+
+            <!-- Seção de Estatísticas -->
+            <section class="stats-section">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <div class="stat-content">
+                        <p class="stat-label">Total de Itens</p>
+                        <p class="stat-value" id="total-itens">0</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div class="stat-content">
+                        <p class="stat-label">Comprados</p>
+                        <p class="stat-value" id="total-comprados">0</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-content">
+                        <p class="stat-label">Faltam Comprar</p>
+                        <p class="stat-value" id="total-pendentes">0</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção de Lista de Produtos -->
+            <section class="products-section">
+                <div class="lista-produtos" id="lista-produtos">
+                    <div class="empty-state">
+                        <i class="fas fa-shopping-bag"></i>
+                        <p>Nenhum produto na lista</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção de Total -->
+            <section class="total-section">
+                <div class="soma-produto">
+                    <div class="total-label">
+                        <i class="fas fa-receipt"></i>
+                        <span>Total da Compra:</span>
+                    </div>
+                    <h2 class="total-value" id="total-valor">R$ 0,00</h2>
+                </div>
+                <div class="action-buttons">
+                    <button class="btn btn-secondary" id="exportar">
+                        <i class="fas fa-download"></i> Exportar
+                    </button>
+                    <button class="btn btn-danger" id="limpar">
+                        <i class="fas fa-trash"></i> Limpar Lista
+                    </button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 - Lista de Supermercado | Desenvolvido com <i class="fas fa-heart"></i></p>
+        </footer>
     </div>
-    <div class="lista-produtos">
-        
-    </div>
-    <div class="soma-produto">
-        <h1>Total: R$ 0,00</h1>
-    </div>
-    <button name="limpar">Limpar</button>
 
     <script src="assets/js/script.js"></script>
 </body>
