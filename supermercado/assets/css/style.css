@@ -465,9 +465,11 @@ section {
 footer {
     text-align: center;
     padding: 20px;
-    color: var(--text-secondary);
-    font-size: 13px;
+    color: rgba(255, 255, 255, 0.863);
+    font-size: 1rem;
     margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.438);
+    border-radius: 0.5rem;
 }
 
 footer i {
